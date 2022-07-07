@@ -4,12 +4,12 @@ const form = document.querySelector('.feedback-form');
 const FORM_KEY = 'feedback-form-state';
 
 const formData = {};
-inputTextContent();
+refreshInputUpdate();
 
-form.addEventListener('input', throttle(onFormInput, 500));
+form.addEventListener('input', throttle(onInput, 500));
 form.addEventListener('submit', onFormSubmit);
 
-function onFormInput(event) {
+function onInput(event) {
   formData[event.target.name] = event.target.value;
   const stringifyJson = JSON.stringify(formData);
   localStorage.setItem(FORM_KEY, stringifyJson);
@@ -22,7 +22,7 @@ function onFormSubmit(event) {
   console.log(formData);
 }
 
-function inputTextContent() {
+function refreshInputUpdate() {
   let object = localStorage.getItem(FORM_KEY);
 
   if (object) {
