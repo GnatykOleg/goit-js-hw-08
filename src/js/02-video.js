@@ -6,7 +6,7 @@ const iframe = document.querySelector('#vimeo-player');
 const player = new Player(iframe);
 
 const onPlay = function ({ seconds }) {
-  console.log('Время:', seconds);
+  console.log('Time:', seconds);
   localStorage.setItem(TIME_KEY, JSON.stringify(seconds));
 };
 

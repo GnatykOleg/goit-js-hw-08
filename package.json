@@ -1,21 +1,21 @@
 {
-  "name": "goit-js-hw-08",
+  "name": "project-infrastructure-and-web-storage",
   "version": "2.0.0",
   "description": "**Read in other languages: [Русский](README.md), [Polski](README.pl.md).**",
-  "homepage": "https://GnatykOleg.github.io/goit-js-hw-08",
+  "homepage": "https://GnatykOleg.github.io/project-infrastructure-and-web-storage",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
+    "build": "parcel build src/*.html --public-url /project-infrastructure-and-web-storage/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GnatykOleg/goit-js-hw-08.git"
+    "url": "git+https://github.com/GnatykOleg/project-infrastructure-and-web-storage.git"
   },
   "keywords": [],
   "author": "GnatykOleg",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GnatykOleg/goit-js-hw-08/issues"
+    "url": "https://github.com/GnatykOleg/project-infrastructure-and-web-storage/issues"
   },
   "dependencies": {
     "@swc/helpers": "^0.4.3",
@@ -31,5 +31,4 @@
     "posthtml-include": "^1.7.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
-  
 }

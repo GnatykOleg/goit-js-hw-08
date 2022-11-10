@@ -1,14 +1,24 @@
-<b>Задание 1 - библиотека SimpleLightbox</b>
+# This web application allows you to search for countries and get brief information about them.
 
-Выполняй это задание в файлах 01-gallery.html и 01-gallery.js. Разбей его на несколько подзадач:
+## The project is based on Parcel.
 
-Добавь библиотеку SimpleLightbox как зависимость проекта используя npm (ссылка на CDN из твоей прошлой работы больше не нужна).
-Используй свой JavaScript код из предыдущей домашней работы, но выполни рефакторинг с учетом того, что библиотека была установлена через npm (синтаксис import/export).
+## Task №1 Gallery
 
-<b>Задание 2 - видео плеер</b>
+#### Added the SimpleLightbox library as a project dependency using npm. And Refactored to take into account that the library was installed via npm (import/export syntax). To connect the CSS code of the library to the project, one more import has been added, besides the one described in the documentation.
 
-В HTML есть <iframe> с видео для Vimeo плеера. Напиши скрипт который будет сохранять текущее время воспроизведения видео в локальное хранилище и, при перезагрузке страницы, продолжать воспроизводить видео с этого времени.
+```// Described in the documentation
+import SimpleLightbox from "simplelightbox";
+// Additional style imports
+import "simplelightbox/dist/simple-lightbox.min.css";
+```
 
+![gallery](./src/images/gallery.jpg)
+
+## Task №2 Vimeo player
+
+#### The HTML has an <iframe> with a video for the Vimeo player. Write a script that will save the current video playback time to local storage and, when page reload, and continue playing the video from now on.
+
+```
 <iframe
   id="vimeo-player"
   src="https://player.vimeo.com/video/236203659"
@@ -18,13 +28,32 @@
   allowfullscreen
   allow="autoplay; encrypted-media"
 ></iframe>
+```
 
-Выполняй это задание в файлах 02-video.html и 02-video.js. Разбей его на несколько подзадач:
+#### 1. Added Vimeo player library as project dependency via npm.
 
-Ознакомься с документацией библиотеки Vimeo плеера.
-Добавь библиотеку как зависимость проекта через npm.
-Инициализируй плеер в файле скрипта как это описано в секции pre-existing player, но учти что у тебя плеер добавлен как npm пакет, а не через CDN.
-Разбери документацию метода on() и начни отслеживать событие timeupdate - обновление времени воспроизведения.
-Сохраняй время воспроизведения в локальное хранилище. Пусть ключом для хранилища будет строка "videoplayer-current-time".
-При перезагрузке страницы воспользуйся методом setCurrentTime() для того чтобы возобновить воспроизведение с сохраненной позиции.
-Добавь в проект бибилотеку lodash.throttle и сделай так, чтобы время воспроизведения обновлялось в хранилище не чаще чем раз в секунду.
+#### 2. The player is initialized in the script file as described in the pre-existing section player.
+
+#### 3. Track the event timeupdate - updating the playback time.
+
+#### 4. Save playback time to local storage.
+
+#### 5. When reloading the page, the setCurrentTime() method was used to resume playback from the saved position.
+
+#### 6. Added lodash.throttle library to the project so that the playback time updated in the repository no more than once per second.
+
+![gallery](./src/images/vimeo.jpg)
+
+## Task №3 Feedback form
+
+#### 1. A script has been written that saves field values ​​to local storage when the user is typing something.
+
+#### 2. Track the input event on the form, and each time write to the local storage object with email and message fields in which to save the current form field values.
+
+#### 3. When the page is loaded, the state of the storage is checked, and if there is saved data, I fill the form fields with them. Otherwise, the fields must be empty.
+
+#### 4. When submitting the form, I clear the storage and form fields and also display the object with fields email, message, and their current values ​​to the console.
+
+#### 5. The storage is updated no more than once every 500 milliseconds. For this, the lodash.throttle library is used.
+
+![form](./src/images/feedback.jpg)
